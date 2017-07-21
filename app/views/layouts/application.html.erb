@@ -7,6 +7,6 @@
 <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 <body class='<%= controller.controller_name %>'>
-  <div id="banner">    <%= image_tag 'logo.svg', alt: 'The Pragmatic Bookshelf' %>    <span class="title"><%= @page_title %></span>  </div>    <div id="columns">      <div id="side">        <ul>          <li><%= pluralize(@count,"visit") if @count >= 5 %></li>          <li><%= Time.now.strftime('%I:%M %p') %></li>          <li><a href="http://www....">Home</a></li>          <li><a href="http://www..../faq">Questions</a></li>          <li><a href="http://www..../news">News</a></li>          <li><a href="http://www..../contact">Contact</a></li>        </ul>      </div>      <div id="main">        <%= yield %>      </div>    </div>
+  <div id="banner">    <%= image_tag 'logo.svg', alt: 'The Pragmatic Bookshelf' %>    <span class="title"><%= @page_title %></span>  </div>    <div id="columns">      <div id="side">        <ul>          <li><%= pluralize(@count,"visit") %></li>          <li><%= Time.now.strftime('%I:%M %p') %></li>          <li><%= link_to 'Home', store_index_path %></li>          <li><a href="http://www..../faq">Questions</a></li>          <li><a href="http://www..../news">News</a></li>          <li><a href="http://www..../contact">Contact</a></li>        </ul>      </div>      <div id="main">        <%= yield %>      </div>    </div>
   </body>
 </html>
