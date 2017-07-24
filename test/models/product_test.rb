@@ -85,7 +85,7 @@ class ProductTest < ActiveSupport::TestCase
                           image_url: "small.gif")
 
     assert product.invalid?
-    assert_equal ["so soz need 10 characters minimum"], product.errors[:title]
+    assert_equal ["is too short (minimum is 10 characters)"], product.errors[:title]
   end
 
 end
